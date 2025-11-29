@@ -1,0 +1,286 @@
+:root { 
+    --main-color: #12B886;
+    --dark: #0d3d32;
+    --bg: #ffffff; /* FUNDO BRANCO */
+    --white: #ffffff;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    font-size: 10px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+body {
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* CENTRALIZADOR */
+.container { max-width: 1200px; margin: 0 auto; padding: 1.2rem 2rem; }
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--dark);
+    border-bottom: var(--border);
+    height: 60px; /* MENOR */
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img { height: 40px; }
+
+/* MENU */
+.navbar { display: flex; gap: 2rem; }
+.navbar a {
+    color: white;
+    font-size: 1.6rem;
+    padding-bottom: 0.2rem;
+}
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+/* CONTEÚDO */
+main { flex: 1; }
+
+.conteudo-desktop {
+    margin-top: 90px; /* espaço por causa do header menor */
+    padding: 2rem;
+}
+
+.coluna-esquerda { width: 100%; }
+
+/* QUADRO GRANDE */
+.box-grande {
+    width: 100%;
+    height: 350px; /* MENOR */
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.imagem-box {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER */
+.footer {
+    background: #0d3d32;
+    padding: 1.5rem 2rem; /* MENOR */
+    color: white;
+    border-top: 0.2rem solid rgba(255,255,255,0.2);
+}
+.footer h2 {
+    margin-bottom: .5rem;
+    color: var(--main-color);
+}
+.contato-info p { font-size: 1.4rem; margin: .2rem 0; }
+/* ÁREA DO PERFIL */
+.perfil-area {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+/* FOTO ESQUERDA */
+.perfil-foto img {
+    width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* TEXTO DIREITA */
+.perfil-texto {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* NOME CENTRALIZADO */
+.perfil-nome {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    text-align: center;
+}
+
+/* BIO */
+.perfil-bio {
+    font-size: 1.6rem;
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
+    margin-top: 1rem;
+}
+/* ÁREA DO PERFIL (HOME) */
+.perfil-area {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.perfil-foto img {
+    width: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.perfil-texto {
+    max-width: 600px;
+    text-align: center;
+}
+
+.perfil-nome {
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+    color: var(--dark);
+}
+
+.perfil-subtitulo {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    margin-bottom: 1.2rem;
+}
+
+.perfil-bio {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* SEÇÕES GERAIS (SOBRE, SERVIÇOS, AGENDAMENTO) */
+.secao {
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+
+.secao-titulo {
+    font-size: 2.2rem;
+    color: var(--dark);
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.secao-subtitulo {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    margin: 1.6rem 0 0.8rem;
+}
+
+/* TEXTO DAS SEÇÕES */
+.secao-texto {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/* LISTAS */
+.lista-simples {
+    list-style: disc;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.lista-simples li + li {
+    margin-top: 0.3rem;
+}
+
+/* CARDS DE SERVIÇOS */
+.cards-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card-servico {
+    flex: 1 1 260px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.4rem 1.6rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.card-servico h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+    color: var(--dark);
+}
+
+.card-servico p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* AGENDAMENTO */
+.agendamento-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.agendamento-bloco {
+    flex: 1 1 260px;
+}
+
+/* BOTÃO WHATSAPP */
+.btn-whats {
+    display: inline-block;
+    margin-top: 1.4rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-whats:hover {
+    filter: brightness(0.9);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .perfil-area {
+        flex-direction: column;
+    }
+
+    .perfil-texto {
+        text-align: center;
+    }
+
+    .cards-servicos,
+    .agendamento-grid {
+        flex-direction: column;
+    }
+}
